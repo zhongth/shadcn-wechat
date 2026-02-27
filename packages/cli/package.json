@@ -1,0 +1,35 @@
+{
+  "name": "shadcn-wechat",
+  "version": "0.0.1",
+  "description": "CLI for adding shadcn-style components to your Taro WeChat Mini Program",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "shadcn-wechat": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "tsx scripts/build-registry-data.ts",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist src/generated"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "prompts": "^2.4.2",
+    "chalk": "^5.4.0",
+    "ora": "^8.1.0",
+    "fs-extra": "^11.2.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/prompts": "^2.4.9",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

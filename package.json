@@ -1,0 +1,21 @@
+{
+  "name": "shadcn-wechat",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A shadcn/ui-style component library for WeChat Mini Programs built on Taro",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "$schema": "./registry-schema.json",
+  "name": "shadcn-wechat",
+  "homepage": "https://shadcn-wechat.dev",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "description": "Utility functions including cn() helper",
+      "dependencies": ["clsx", "tailwind-merge"],
+      "registryDependencies": [],
+      "files": [
+        { "path": "src/lib/utils.ts", "target": "lib/utils.ts" }
+      ]
+    },
+    {
+      "name": "use-callback-ref",
+      "type": "registry:hook",
+      "description": "Stable callback reference hook",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        { "path": "src/hooks/use-callback-ref.ts", "target": "hooks/use-callback-ref.ts" }
+      ]
+    },
+    {
+      "name": "use-controllable-state",
+      "type": "registry:hook",
+      "description": "Controlled/uncontrolled state management hook",
+      "dependencies": [],
+      "registryDependencies": ["use-callback-ref"],
+      "files": [
+        { "path": "src/hooks/use-controllable-state.ts", "target": "hooks/use-controllable-state.ts" }
+      ]
+    },
+    {
+      "name": "use-disclosure",
+      "type": "registry:hook",
+      "description": "Open/close boolean state hook",
+      "dependencies": [],
+      "registryDependencies": ["use-controllable-state"],
+      "files": [
+        { "path": "src/hooks/use-disclosure.ts", "target": "hooks/use-disclosure.ts" }
+      ]
+    },
+    {
+      "name": "use-gesture",
+      "type": "registry:hook",
+      "description": "Touch gesture recognition hook (swipe, pan)",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        { "path": "src/hooks/use-gesture.ts", "target": "hooks/use-gesture.ts" }
+      ]
+    },
+    {
+      "name": "use-id",
+      "type": "registry:hook",
+      "description": "Stable unique ID generation hook",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        { "path": "src/hooks/use-id.ts", "target": "hooks/use-id.ts" }
+      ]
+    },
+    {
+      "name": "use-previous",
+      "type": "registry:hook",
+      "description": "Track previous value hook",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        { "path": "src/hooks/use-previous.ts", "target": "hooks/use-previous.ts" }
+      ]
+    },
+    {
+      "name": "use-timeout",
+      "type": "registry:hook",
+      "description": "Declarative setTimeout hook",
+      "dependencies": [],
+      "registryDependencies": ["use-callback-ref"],
+      "files": [
+        { "path": "src/hooks/use-timeout.ts", "target": "hooks/use-timeout.ts" }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "description": "A button component with multiple variants and sizes",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/button.tsx", "target": "components/ui/button.tsx" }
+      ]
+    },
+    {
+      "name": "text",
+      "type": "registry:ui",
+      "description": "Typography component with semantic variants for mini programs",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/text.tsx", "target": "components/ui/text.tsx" }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "description": "Badge component for status indicators",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/badge.tsx", "target": "components/ui/badge.tsx" }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "description": "Visual separator for dividing content",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/separator.tsx", "target": "components/ui/separator.tsx" }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "description": "Card container with header, content, and footer sections",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/card.tsx", "target": "components/ui/card.tsx" }
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "description": "Label component for form controls",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/label.tsx", "target": "components/ui/label.tsx" }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "description": "Text input component wrapping Taro Input",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/input.tsx", "target": "components/ui/input.tsx" }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "description": "Multi-line text input component",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/textarea.tsx", "target": "components/ui/textarea.tsx" }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "description": "Loading placeholder with pulse animation",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/skeleton.tsx", "target": "components/ui/skeleton.tsx" }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "description": "Avatar component with image and fallback support",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/avatar.tsx", "target": "components/ui/avatar.tsx" }
+      ]
+    },
+    {
+      "name": "safe-area",
+      "type": "registry:ui",
+      "description": "Safe area padding for device notches and home indicators",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/safe-area.tsx", "target": "components/ui/safe-area.tsx" }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "description": "Alert component for important messages",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/alert.tsx", "target": "components/ui/alert.tsx" }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "description": "Progress bar indicating completion status",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/progress.tsx", "target": "components/ui/progress.tsx" }
+      ]
+    },
+    {
+      "name": "popup",
+      "type": "registry:ui",
+      "description": "Overlay primitive with backdrop and positioned content",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-disclosure"],
+      "files": [
+        { "path": "src/ui/popup.tsx", "target": "components/ui/popup.tsx" }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "description": "Modal dialog with title, description, and action buttons",
+      "dependencies": [],
+      "registryDependencies": ["utils", "popup"],
+      "files": [
+        { "path": "src/ui/dialog.tsx", "target": "components/ui/dialog.tsx" }
+      ]
+    },
+    {
+      "name": "action-sheet",
+      "type": "registry:ui",
+      "description": "Bottom action sheet with list of actions",
+      "dependencies": [],
+      "registryDependencies": ["utils", "popup"],
+      "files": [
+        { "path": "src/ui/action-sheet.tsx", "target": "components/ui/action-sheet.tsx" }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "description": "Toast notifications with imperative API",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-timeout"],
+      "files": [
+        { "path": "src/ui/toast.tsx", "target": "components/ui/toast.tsx" }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "description": "Checkbox toggle control",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/checkbox.tsx", "target": "components/ui/checkbox.tsx" }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "description": "Radio group for mutually exclusive selection",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/radio-group.tsx", "target": "components/ui/radio-group.tsx" }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "description": "Toggle switch control",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/switch.tsx", "target": "components/ui/switch.tsx" }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "description": "Tabbed content switching",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/tabs.tsx", "target": "components/ui/tabs.tsx" }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "description": "Collapsible content sections",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/accordion.tsx", "target": "components/ui/accordion.tsx" }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "description": "Range slider input control",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state", "use-id"],
+      "files": [
+        { "path": "src/ui/slider.tsx", "target": "components/ui/slider.tsx" }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "description": "Select dropdown with Popup-based options list",
+      "dependencies": [],
+      "registryDependencies": ["utils", "popup", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/select.tsx", "target": "components/ui/select.tsx" }
+      ]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "description": "Form components compatible with react-hook-form",
+      "dependencies": [],
+      "registryDependencies": ["utils", "label"],
+      "files": [
+        { "path": "src/ui/form.tsx", "target": "components/ui/form.tsx" }
+      ]
+    },
+    {
+      "name": "navigation-bar",
+      "type": "registry:ui",
+      "description": "Custom navigation bar replacing WeChat default",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/navigation-bar.tsx", "target": "components/ui/navigation-bar.tsx" }
+      ]
+    },
+    {
+      "name": "tab-bar",
+      "type": "registry:ui",
+      "description": "Custom bottom tab bar for navigation",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/tab-bar.tsx", "target": "components/ui/tab-bar.tsx" }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "description": "Drawer/Sheet component with drag-to-dismiss gesture",
+      "dependencies": [],
+      "registryDependencies": ["utils", "popup", "use-gesture"],
+      "files": [
+        { "path": "src/ui/drawer.tsx", "target": "components/ui/drawer.tsx" }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "description": "Carousel/Swiper with custom dots and controls",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-controllable-state"],
+      "files": [
+        { "path": "src/ui/carousel.tsx", "target": "components/ui/carousel.tsx" }
+      ]
+    },
+    {
+      "name": "infinite-scroll",
+      "type": "registry:ui",
+      "description": "ScrollView with automatic load-more on scroll to bottom",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/infinite-scroll.tsx", "target": "components/ui/infinite-scroll.tsx" }
+      ]
+    },
+    {
+      "name": "pull-to-refresh",
+      "type": "registry:ui",
+      "description": "Pull-to-refresh ScrollView wrapper",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/pull-to-refresh.tsx", "target": "components/ui/pull-to-refresh.tsx" }
+      ]
+    },
+    {
+      "name": "swipe-cell",
+      "type": "registry:ui",
+      "description": "Swipeable cell revealing hidden action buttons",
+      "dependencies": [],
+      "registryDependencies": ["utils", "use-gesture"],
+      "files": [
+        { "path": "src/ui/swipe-cell.tsx", "target": "components/ui/swipe-cell.tsx" }
+      ]
+    },
+    {
+      "name": "virtual-list",
+      "type": "registry:ui",
+      "description": "Virtualized list rendering only visible items",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/virtual-list.tsx", "target": "components/ui/virtual-list.tsx" }
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "description": "Calendar with single, range, and multiple date selection",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/calendar.tsx", "target": "components/ui/calendar.tsx" }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "description": "Date picker with calendar popup",
+      "dependencies": [],
+      "registryDependencies": ["utils", "calendar", "popup"],
+      "files": [
+        { "path": "src/ui/date-picker.tsx", "target": "components/ui/date-picker.tsx" }
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "description": "Command/search palette with filterable list",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/command.tsx", "target": "components/ui/command.tsx" }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "description": "Flexbox-based data table with column definitions",
+      "dependencies": [],
+      "registryDependencies": ["utils"],
+      "files": [
+        { "path": "src/ui/data-table.tsx", "target": "components/ui/data-table.tsx" }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "description": "Sidebar navigation using left-positioned Drawer",
+      "dependencies": [],
+      "registryDependencies": ["utils", "drawer"],
+      "files": [
+        { "path": "src/ui/sidebar.tsx", "target": "components/ui/sidebar.tsx" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.turbo/
+*.log
+.DS_Store
+
+# Taro
+.temp/
+.rn_temp/
+
+# WeChat DevTools
+project.config.json
+project.private.config.json
+
+# SWC cache
+.swc/
+
+# IDE
+.vscode/
+.idea/
+
+# CLI generated registry data
+packages/cli/src/generated/
+
+# Environment
+.env
+.env.local

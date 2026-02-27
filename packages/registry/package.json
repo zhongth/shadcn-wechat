@@ -1,0 +1,15 @@
+{
+  "name": "@shadcn-wechat/registry",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Component registry for shadcn-wechat",
+  "license": "MIT",
+  "scripts": {
+    "build:registry": "tsx scripts/build-registry.ts",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
